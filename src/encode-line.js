@@ -10,11 +10,21 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For aabbbc should return 2a3bc
  *
  */
-function encodeLine(/* str */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
-}
-
+function encodeLine(str) {
+  const answer = [];
+  for (const char of str) {
+  if (answer.length && answer[[answer.length-1]].hasOwnProperty(char)) {
+  answer[answer.length-1][char]++
+  } else {
+  answer.push({[char]: 1});
+  }
+  }
+  return answer.map(item =>{
+    const a = Object.entries(item)[0]
+    return (a[1] === 1?'':a[1]) +a[0]
+  } ).join('')
+  }
+  encodeLine('aabbccc')
 module.exports = {
   encodeLine
 };

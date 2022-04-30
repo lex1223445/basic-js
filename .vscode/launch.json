@@ -1,0 +1,8 @@
+{"configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test",
+      "program": "./src/dream-team.js"
+      }
+    ]}

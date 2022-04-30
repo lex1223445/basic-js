@@ -16,6 +16,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function renameFiles(/* names */) {
+  //  запоминать название которые были, если такое было добавлять суфикс
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
